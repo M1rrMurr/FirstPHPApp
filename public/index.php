@@ -1,19 +1,22 @@
 <?php
 
 
+const BASE_PATH = __DIR__ . "/../";
+
+require BASE_PATH . 'vendor/autoload.php';
+
 session_start();
 
 use Core\FormException;
 use Core\Router;
 use Core\Session;
 
-const BASE_PATH = __DIR__ . "/../";
 require '../core/functions.php';
 
-spl_autoload_register(function ($class) {
+/* spl_autoload_register(function ($class) {
     $class = str_replace("\\", "/", $class);
     require basePath($class . ".php");
-});
+}); */
 
 require basePath("bootstrap.php");
 
